@@ -3,6 +3,7 @@
   --color-text: #1a1a1a;
   --color-text-muted: #595959;
   --color-accent: #7b1e3a;
+  --color-on-accent: #ffffff;
   --color-border: #1a1a1a;
   --color-focus: #7b1e3a;
   --color-panel-bg: #faf8f8;
@@ -13,9 +14,10 @@
     --color-bg: #121212;
     --color-text: #f2f0ee;
     --color-text-muted: #b3b0ae;
-    --color-accent: #d98ba0;
+    --color-accent: #d2b48c;
+    --color-on-accent: #121212;
     --color-border: #f2f0ee;
-    --color-focus: #d98ba0;
+    --color-focus: #d2b48c;
     --color-panel-bg: #1c1a1a;
   }
 }
@@ -66,13 +68,13 @@ body {
 }
 
 .title {
-  font-size: 1.15rem;
+  font-size: 1.3rem;
   margin: 0 0 4px;
   color: var(--color-text);
 }
 
 .school-year {
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   margin: 0;
   color: var(--color-text-muted);
 }
@@ -113,7 +115,7 @@ body {
 .btn:hover {
   background: var(--color-accent);
   border-color: var(--color-accent);
-  color: #ffffff;
+  color: var(--color-on-accent);
 }
 
 .btn:focus-visible {
@@ -124,7 +126,7 @@ body {
 .btn--filled {
   background: var(--color-accent);
   border-color: var(--color-accent);
-  color: #ffffff;
+  color: var(--color-on-accent);
 }
 
 .btn--filled:hover {
