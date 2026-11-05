@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Schott;Aaron;;;
+FN:Aaron Schott
+ORG:Case Western Reserve University
+TITLE:Computer Engineering Student
+EMAIL;TYPE=INTERNET:aaron.schott@case.edu
+TEL;TYPE=CELL:954-995-5300
+URL:https://www.linkedin.com/in/aaron-milan-schott/
+END:VCARD

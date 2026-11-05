@@ -1,0 +1,178 @@
+:root {
+  --color-bg: #ffffff;
+  --color-text: #1a1a1a;
+  --color-text-muted: #595959;
+  --color-accent: #7b1e3a;
+  --color-border: #1a1a1a;
+  --color-focus: #7b1e3a;
+  --color-panel-bg: #faf8f8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #121212;
+    --color-text: #f2f0ee;
+    --color-text-muted: #b3b0ae;
+    --color-accent: #d98ba0;
+    --color-border: #f2f0ee;
+    --color-focus: #d98ba0;
+    --color-panel-bg: #1c1a1a;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* .btn and .contact-panel below set their own `display`, which would
+   otherwise beat the UA stylesheet's [hidden] { display: none } rule. */
+[hidden] {
+  display: none !important;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  padding: 32px 20px;
+}
+
+.card {
+  width: 100%;
+  max-width: 480px;
+  text-align: center;
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+.name {
+  font-size: 2.25rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  font-variant-caps: small-caps;
+  margin: 0 0 8px;
+  line-height: 1.2;
+}
+
+.title {
+  font-size: 1.15rem;
+  margin: 0 0 4px;
+  color: var(--color-text);
+}
+
+.school-year {
+  font-size: 0.95rem;
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+.divider {
+  width: 72px;
+  height: 0;
+  border: none;
+  border-top: 1px solid var(--color-accent);
+  margin: 28px auto;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  width: 100%;
+  padding: 10px 16px;
+  font-family: inherit;
+  font-size: 1.05rem;
+  letter-spacing: 0.03em;
+  color: var(--color-text);
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: 2px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.btn:hover {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #ffffff;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
+.btn--filled {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #ffffff;
+}
+
+.btn--filled:hover {
+  background: var(--color-bg);
+  color: var(--color-accent);
+}
+
+.contact-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px;
+  margin-top: 2px;
+  background: var(--color-panel-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 2px;
+  text-align: left;
+}
+
+.contact-row {
+  display: flex;
+  flex-direction: column;
+  min-height: 48px;
+  justify-content: center;
+  padding: 6px 10px;
+  color: var(--color-text);
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: 2px;
+}
+
+.contact-row:hover {
+  border-color: var(--color-accent);
+}
+
+.contact-row:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+.contact-label {
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.contact-value {
+  font-size: 1.05rem;
+  word-break: break-word;
+}

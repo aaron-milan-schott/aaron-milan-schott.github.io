@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aaron Schott</title>
+
+  <!--
+    SEO is intentionally turned off for now because this page shows a
+    personal email and phone number. Once a real portfolio site exists,
+    delete the line below so this page can be indexed normally.
+  -->
+  <meta name="robots" content="noindex">
+
+  <!-- Simple inline SVG favicon: a thin burgundy diamond, no external request -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='6' y='6' width='20' height='20' fill='none' stroke='%237b1e3a' stroke-width='2' transform='rotate(45 16 16)'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <main class="card">
+    <header class="header">
+      <h1 id="name" class="name"><!-- filled by js/main.js from config --></h1>
+      <p id="title" class="title"></p>
+      <p id="school-year" class="school-year"></p>
+    </header>
+
+    <hr class="divider">
+
+    <nav class="actions" aria-label="Contact options">
+      <a id="linkedin-btn" class="btn" href="#" target="_blank" rel="noopener noreferrer">
+        LinkedIn
+      </a>
+
+      <!-- Hidden by js/main.js until CONFIG.portfolio is set; see js/config.js -->
+      <a id="portfolio-btn" class="btn" href="#" target="_blank" rel="noopener noreferrer" hidden>
+        Portfolio
+      </a>
+
+      <button id="contact-toggle" class="btn" type="button" aria-expanded="false" aria-controls="contact-panel">
+        Contact
+      </button>
+
+      <div id="contact-panel" class="contact-panel" hidden>
+        <a id="email-link" class="contact-row" href="#">
+          <span class="contact-label">Email</span>
+          <span id="email-value" class="contact-value"></span>
+        </a>
+        <a id="phone-link" class="contact-row" href="#">
+          <span class="contact-label">Call</span>
+          <span id="phone-value" class="contact-value"></span>
+        </a>
+        <a id="vcard-link" class="btn btn--filled" href="contact.vcf" download="Aaron-Schott.vcf">
+          Save Contact
+        </a>
+      </div>
+    </nav>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
